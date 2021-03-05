@@ -35,4 +35,7 @@ exemple du QR code créé pour la personne de cin ffffffff:
 ![exemple QR code](/ReadmeImgs/qr%20exemple.PNG)
 
 
+exemple de statistiques fournies:
+![stats](/ReadmeImgs/stats.PNG)
+
 
