@@ -1,0 +1,39 @@
+
+@api_view(['GET'])
+def allPersonnes(request):
+    p=Personne.objects.all()
+    serializer=PersonneSerializer(p,many=True)
+    return Response(serializer.data)
+
+
+
+@api_view(['GET'])
+def getPersonne(request,id):
+    p=Personne.objects.get(id=id)
+    serializer=PersonneSerializer(p)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def addPersonne(request):
+    serializer=PersonneSerializer(data=request.data,many=True)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    else:
+        return Response({"serializer:error"})
+
+@api_view(['PUT'])
+def updatePersonne(request,id):
+
+    p=Personne.objects.get(id=id)
+    serializer=PersonneSerializer(instance=p,data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+
+
+@api_view(['DELETE'])
+def deletePersonne(request,id):
+    p=Personne.objects.get(id=id)
+    p.delete()
+    return Response("Personne supprimé")
