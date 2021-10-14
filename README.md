@@ -1,4 +1,5 @@
 # vaccinationMaroc
+### ✨ Contents
 Ce mini projet est dédié pour la gestion de vaccination qui prend la forme d’une
 API (Application Programming Interface) qui permet de fournir des données sur
 les personnes vaccinées et les centres de vaccination au Maroc.
@@ -39,3 +40,25 @@ exemple de statistiques fournies:
 ![stats](/ReadmeImgs/stats.PNG)
 
 
+
+
+### 📺 How to Install  
+* Créer un environnement virtuel( recommandé)
+```
+python -m venv vaccinatinEnv && cd ./vaccinatinEnv/Scripts && activate && cd ../..
+
+```
+* Télécharger le code source
+```
+git clone https://github.com/zakariaqasbaji/vaccinationMaroc.git 
+
+```
+* Exporter la base de données vaccination (vaccination.sql)
+* Installer les prérequis
+```
+pip install -r requirements.txt 
+```
+### ⚛ How to Run
+```
+python manage.py runserver
+```
